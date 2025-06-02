@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { text-align: center; }
+        table { border: 1px solid black; margin: auto; height: 300px; width: 300px; }
+        td { border: 1px solid black; width: 50px; height: 50px; text-align: center; vertical-align: middle; }
+
+        :root {
+            --primary-color: #7d4ab4;
+            --secondary-color: #6c757d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: aqua;
+            padding: 20px;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(183, 133, 133, 0.1);
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #dd3f3f 100%);
+            color: rgb(138, 142, 142);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.05"><defs><pattern id="pattern" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="white"/><circle cx="25" cy="25" r="10" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+            z-index: 0;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            background-color: #02020a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div style="display: flex;" class="container">
+            <a class="navbar-brand" href="bienvenue.html">
+                <img src="Logo ENEAM-UAC.jpg" alt="photo" width="50" height="50">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul style="display: flex; width: 1170px; justify-content: end;" class="navbar-nav ms-auto">
+                    <li style="margin: 0 15px;" class="nav-item"><a href="bienvenue.html" >Bienvenue</a></li>
+                    <li style="margin: 0 15px;" class="nav-item"><a href="cursus.html" >Mon cursus</a></li>
+                    <li style="margin: 0 15px;" class="nav-item"><a href="moncv.html" >CV</a></li>
+                    <li style="margin: 0 15px;" class="nav-item"><a href="tableau.html" >Tableau</a></li>
+                    <li style="margin: 0 15px;" class="nav-item"><a href="formulaire.html" >Formulaire</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section du tableau -->
+    <section id="accueil" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4 text-white">Mon Tableau</h1>
+            <table>
+                <tr>
+                    <td rowspan="3" style="background-color: green; color: red;">IG</td>
+                    <td style="text-decoration: underline;">
+                        <a href="moncv.html" target="_blank" style="color: violet;">CV</a>
+                    </td>
+                    <td>GL</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>H</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: yellow; color: blue;">GRH</td>
+                </tr>
+                <tr>
+                    <td>CG</td>
+                    <td>GTL</td>
+                    <td>I</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AMADOU SOULE. Tous droits réservés.</p>
+           <div class="social-links mt-3">
+                        <a style="color: white;" href="https://www.facebook.com/mistoura.amadou.soule?mibextid=ZbWKwL" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                        <a style="color: white;" href="https://wa.me/+2290196356025" target="_blank" class="text-white mx-2"><i class="fab fa-whatsapp"></i></a>
+                        <a style="color: white;" href="https://www.linkedin.com/in/mistoura-amadou-soule-805a49335" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+        </div>
+    </footer>
+
+</body>
+</html>

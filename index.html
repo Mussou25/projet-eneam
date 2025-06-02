@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: rgb(138, 144, 182) !important;
+            
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #e2393c 100%);
+            color: rgb(151, 163, 161);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.05"><defs><pattern id="pattern" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="white"/><circle cx="25" cy="25" r="10" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+        }
+        .services-section {
+            padding: 80px 0;
+            background-color: #88669e;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .team-section {
+            background-color: rgb(38, 143, 241);
+            padding: 80px 0;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color:  #ce4ba4;
+            color: white;
+            padding: 40px 0;
+        }
+        .contact-section {
+            background-color: #f1f3f5;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-main">
+    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div style="display: flex;" class="container">
+            <a class="navbar-brand" href="bienvenue.html" style="margin-left: -70px;">
+                <i> <img src="Logo ENEAM-UAC.jpg" alt="photo" width="50" height="50"></i>
+               
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul style="display: flex; width: 1100px; justify-content: end;" class="navbar-nav ms-auto">
+                    <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="bienvenue.html">Bienvenue</a></li>
+                    <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="cursus.html">Mon cursus</a></li>
+                    <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="moncv.html">CV</li>
+                    <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="tableau.html">Tableau</a></li>
+                    <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="formulaire.html">Formulaire</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero-section text-center">
+        <div class="container">
+         <center>   <h1 class="display-4 mb-4 text-white">SOYEZ LES BIENVENUE</h1>
+            <p class="lead mb-5 text-white-50">MOI C'EST AMADOU SOULE Mistoura</p>
+         </center>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul>
+                        <li><a href="bienvenue.html">Bienvenue</a></li>
+                        <li><a href="cursus.html">Mon cursus </a></li>
+                        <li><a href="moncv.html">CV</a></li>
+                        <li><a href="tableau.html">Tableau</a></li>
+                        <li><a href="formulaire.html">Formulaire</a></li>
+
+                    </ul>
+
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <h2 class="text-center mb-4">Discutons </h2>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Votre Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Votre Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 AMADOU SOULE. Tous droits réservés.</p>
+                   <div class="social-links mt-3">
+                        <a href="https://www.facebook.com/mistoura.amadou.soule?mibextid=ZbWKwL" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/+2290196356025" target="_blank" class="text-white mx-2"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/mistoura-amadou-soule-805a49335" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

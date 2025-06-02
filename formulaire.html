@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulaire de Contact</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+function checkPrecisionRequirement() {
+  var autreOption = document.getElementById('autre').checked;
+  var precisionField = document.getElementById('precision');
+  precisionField.required = autreOption;
+}
+
+function submitForm() {
+  alert("Merci pour vos réponses");
+  return false; // Pour empêcher le formulaire de s'envoyer réellement
+}
+
+function resetForm() {
+  document.getElementById("contactForm").reset();
+}
+</script>
+<style>
+  :root {
+            --primary-color: white;
+            --secondary-color: rgb(48, 185, 121);
+        }
+       
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: rgb(116, 119, 142) !important;
+            
+        } 
+        body {
+  
+          display: flex;
+          flex-direction: column;
+        }
+
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2fa3c7 100%);
+            color: rgb(4, 10, 9);
+            position: relative;
+            overflow: hidden;
+        }
+       
+        .footer {
+            background-color: black;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+
+
+</style>
+</head>
+<body>
+  <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div style="display: flex;" class="container">
+        <a class="navbar-brand" href="bienvenue.html" style="margin-left: -70px;">
+            <i> <img src="Logo ENEAM-UAC.jpg" alt="photo" width="50" height="50"></i>
+           
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul style="display: flex; width: 1100px; justify-content: end;" class="navbar-nav ms-auto">
+                <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="bienvenue.html" >Bienvenue</a></li>
+                <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="cursus.html" >Mon cursus</a></li>
+                <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="moncv.html" >CV</li>
+                <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="tableau.html" >Tableau</a></li>
+                <li style=" margin-left: 15px; margin-right: 15px;" class="nav-item"><a href="formulaire.html" >Formulaire</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="accueil" class="hero-section ">
+  <div class="container">
+   <h1 class="display-4 mb-4 text-white">Formulaire de Contact</h1>
+
+   <form id="contactForm" action="/submit_form" method="post" onsubmit="return submitForm()">
+      <fieldset>
+      <legend>Vos coordonnées:</legend>
+      Nom:<br>
+      <input  type="text" name="nom" size="40" required class="form-control">
+      <br>
+      Prénom:<br>
+       <input type="text" name="prenom" size="40" required class="form-control">
+      <br>
+     Email:<br>
+     <input type="email" name="email" size="40" required class="form-control">
+     <br><br>
+     </fieldset>
+
+      <fieldset>
+      <legend>Votre souhait:</legend>
+      <input type="radio" id="riche" name="souhait" value="riche" onclick="checkPrecisionRequirement()">
+      <label for="riche">Être riche</label><br>
+      <input type="radio" id="celebre" name="souhait" value="celebre" onclick="checkPrecisionRequirement()">
+     <label for="celebre">Être célèbre</label><br>
+     <input type="radio" id="intelligent" name="souhait" value="intelligent" onclick="checkPrecisionRequirement()">
+     <label for="intelligent">Être encore plus intelligent</label><br>
+     <input type="radio" id="autre" name="souhait" value="autre" onclick="checkPrecisionRequirement()">
+      <label for="autre">Autre</label><br>
+      </fieldset>
+
+     <fieldset>
+      <legend>Précision:</legend>
+      <textarea id="precision" name="precision" rows="2" cols="2" class="form-control" style="margin-bottom: 40px;"></textarea>
+     </fieldset>
+  
+      <input type="submit" value="Soumettre" class="form-control" style="margin-bottom: 20px;">
+      <button type="button" onclick="resetForm()" class="form-control" style="margin-bottom: 20px;">Actualiser</button>
+    </form>
+</div>
+</section>
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+              <p>&copy; 2025 AMADOU SOULE MISTOURA. Tous droits réservés.</p>
+              <div class="social-links mt-3">
+                        <a href="https://www.facebook.com/mistoura.amadou.soule?mibextid=ZbWKwL" target="_blank" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/+2290196356025" target="_blank" class="text-white mx-2"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/mistoura-amadou-soule-805a49335" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
