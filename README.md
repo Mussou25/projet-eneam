@@ -1,4 +1,4 @@
-# Mistoura
+# Projet universitaire
 Bonjour et bienvenue sur mon premier site de présentation du projet de l'ENEAM. Ce projet a été mis en œuvre dans le cadre académique pour mettre en patrique les notions acquises en développement web (HTML, CSS).
 
 ## Ce site présente:
